@@ -1,39 +1,113 @@
-<div align="center">
-    <h1>🌐 Prova de Conceito - Fetch API 🌐</h1> 
-    <p>Esta POC demonstra o uso da API Fetch para realizar requisições assíncronas em um aplicativo web, exibindo dados de forma dinâmica e interativa.</p> 
-</div>
+# 🌐 Prova de Conceito - Fetch API 🌐
+
+> Este projeto demonstra o uso da API Fetch para realizar requisições assíncronas em um aplicativo web, permitindo a exibição dinâmica de dados.
+
+---
 
 ## 📋 Descrição do Projeto
 
-Esta Prova de Conceito (POC) tem como objetivo mostrar como a API Fetch pode ser utilizada para realizar chamadas HTTP e manipular dados recebidos de um servidor. O projeto inclui um frontend simples que, ao clicar em um botão, faz uma requisição a uma API pública e exibe os resultados na tela, permitindo uma interação fluida com o usuário.
+Esta Prova de Conceito (POC) foi desenvolvida para demonstrar como a API Fetch pode ser usada em aplicações web para realizar chamadas HTTP e exibir os dados recebidos de forma dinâmica. O projeto inclui uma interface simples, onde o usuário pode clicar em um botão para buscar imagens de uma API pública e vê-las imediatamente na tela.
+
+A página é completamente responsiva e utiliza HTML, CSS e JavaScript para criar uma experiência interativa. A Fetch API permite realizar requisições HTTP assíncronas e trabalhar com respostas de maneira prática, como mostrado neste projeto.
 
 ## 🚀 Funcionalidades
 
-- **Requisições Assíncronas**: Realiza chamadas HTTP usando a API Fetch para obter dados de forma assíncrona.
-- **Exibição de Dados**: Apresenta os dados recebidos em um formato organizado e legível na interface.
-- **Tratamento de Erros**: Inclui tratamento básico de erros para garantir que o usuário seja informado em caso de falhas na requisição.
-- **Estados de Carregamento**: Exibe um indicador de carregamento enquanto os dados estão sendo recuperados, melhorando a experiência do usuário.
-- **Interatividade**: Permite ao usuário interagir com a página através de cliques para realizar novas requisições.
+- **Requisições Assíncronas**: Realiza chamadas HTTP utilizando a API Fetch para obter dados de maneira assíncrona.
+- **Exibição Dinâmica de Imagens**: Exibe imagens de raposas fornecidas por uma API pública diretamente na interface da página.
+- **Botão de Troca de Imagem**: Ao clicar no botão, uma nova imagem é carregada da API e exibida na tela sem recarregar a página.
+- **Tratamento de Erros**: Lida com erros que possam ocorrer durante a requisição e exibe mensagens no console para auxiliar no diagnóstico.
+- **Indicador de Sucesso**: Exibe no console do navegador uma mensagem de sucesso após o carregamento da imagem.
 
 ## 🎨 Layout
 
-A interface é simples e intuitiva, com os seguintes elementos:
+A interface do projeto é simples e intuitiva, composta por:
 
-- **Botão de Fetch**: Um botão que, ao ser clicado, inicia a requisição de dados.
-- **Área de Resultados**: Uma seção onde os dados retornados são exibidos de maneira organizada.
-- **Indicador de Carregamento**: Um elemento que informa ao usuário que os dados estão sendo carregados.
+- **Título e Descrição**: Explicam brevemente o propósito do projeto.
+- **Área de Exibição de Imagens**: Mostra as imagens obtidas via Fetch.
+- **Botão "Trocar Imagem"**: Permite ao usuário buscar novas imagens de raposas de forma dinâmica.
+  
+Aqui está um exemplo da página inicial:
+
+![Print da Página](/POC-04-Fetch-main/imgs/tela_inicial.png)
+
+---
 
 ## 🛠️ Tecnologias Utilizadas
 
-- **HTML**
-- **CSS**
-- **JavaScript**
+- **HTML**: Estrutura básica da página.
+- **CSS**: Estilização da interface, tornando-a moderna e atraente.
+- **JavaScript (Fetch API)**: Responsável pelas requisições HTTP e manipulação dos dados recebidos.
 
-## 📂 Estrutura do Projeto
+---
 
-```bash
+## 🖥️ Como Funciona a Fetch API
+
+No JavaScript, a função `getRaposa` utiliza a Fetch API para fazer uma requisição GET a um endpoint da API pública `https://randomfox.ca/floof/`, que retorna uma imagem de raposa em formato JSON. O código exibe essa imagem dinamicamente na página sem a necessidade de recarregar o conteúdo.
+
+### Exemplo de Requisição com Fetch:
+
+```javascript
+async function getRaposa(endpoint) {
+    try {
+        let response = await fetch(endpoint);
+        let data = await response.json();
+        let urlIGM = data.image;  
+        let content = document.getElementById('imagem-container');
+        content.innerHTML = `<img src="${urlIGM}" alt="Raposa" />`;
+    } catch (error) {
+        console.log(error);
+    } finally {
+        console.log("Sua imagem foi gerada com sucesso!");
+    }
+}
+
+Neste exemplo:
+
+A função fetch() realiza uma requisição HTTP e retorna uma Promise.
+Quando a resposta é recebida, ela é convertida em JSON utilizando response.json().
+A URL da imagem é extraída do objeto JSON e, em seguida, a imagem é inserida dinamicamente na página.
+Indicador de Carregamento:
+Para melhorar a experiência do usuário, você pode adicionar um indicador de carregamento que exibe uma mensagem enquanto a requisição está sendo processada.
+
+Fluxo de Execução:
+O botão "Trocar Imagem" é clicado.
+O getRaposa faz uma nova requisição à API.
+A nova imagem é exibida no container da página.
+
+## 🛠️ Verificando Erros e Sucessos no Console do Navegador
+
+Para garantir que o projeto está funcionando corretamente e para diagnosticar possíveis erros, você pode usar o **Console do Navegador**. Ele exibirá mensagens de sucesso ou falha ao carregar a imagem da API.
+
+### Como abrir o Console do Navegador:
+
+1. **Google Chrome**:
+   - Clique com o botão direito na página e selecione **Inspecionar**.
+   - Vá até a aba **Console**.
+
+2. **Mozilla Firefox**:
+   - Clique com o botão direito na página e selecione **Inspecionar Elemento**.
+   - Vá até a aba **Console**.
+
+3. **Microsoft Edge**:
+   - Clique com o botão direito na página e selecione **Inspecionar**.
+   - Acesse a aba **Console**.
+
+4. **Safari**:
+   - Ative o menu de desenvolvimento em **Safari > Preferências > Avançado > Mostrar o menu Desenvolvedor na barra de menus**.
+   - Depois, selecione **Desenvolvedor > Mostrar Console JavaScript**.
+
+### O que esperar no Console:
+
+- Quando a requisição for bem-sucedida e a imagem for carregada, você verá a mensagem:
+  ```plaintext
+  Sua imagem foi gerada com sucesso!
+
+
 📦 POC-Fetch-API
 ├── 📜 index.html        # Arquivo HTML principal
 ├── 📜 style.css         # Arquivo CSS para estilização
 ├── 📜 script.js         # Arquivo JavaScript contendo a lógica de fetch
 └── 📜 README.md         # Documentação do projeto
+
+
+
