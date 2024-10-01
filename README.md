@@ -102,12 +102,12 @@ Para garantir que o projeto está funcionando corretamente e para diagnosticar p
   ```plaintext
   Sua imagem foi gerada com sucesso!
 
-
+```
 📦 POC-Fetch-API
 ├── 📜 index.html        # Arquivo HTML principal
 ├── 📜 style.css         # Arquivo CSS para estilização
 ├── 📜 script.js         # Arquivo JavaScript contendo a lógica de fetch
-└── 📜 README.md         # Documentação do projeto
+└── 📜 README.md         # Documentação do projeto ```
 
 
 
