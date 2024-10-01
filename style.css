@@ -1,0 +1,50 @@
+/* VARIÁVEIS */
+:root {
+    --fundobody: #202020;
+    --fundobox: #272727;
+    --textocor: #f0f0f0;
+    --corborda: #fc7e00;
+}
+
+/* RESET */
+html, body {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+/* BASE */
+
+body{
+    font-family: "Montserrat", sans-serif;
+    background-color: var(--fundobody);
+    color: var(--textocor);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin: 0;
+
+}
+
+#container {
+    text-align: center;
+    background-color: var(--fundobox);
+    margin-top: 30px;
+    border-radius: 10px;
+    box-shadow: 2px 4px 10px rgba(255, 132, 0, 0.858);
+    height: auto;
+    padding: 0px 20px 0px 20px;
+}
+
+#imagem-container img {
+    max-width: 100%;
+    border: 3px solid var(--corborda);
+    border-radius: 10px;
+    margin-top: 20px;
+    height: 450px;
+    margin-bottom: 25px;
+}
+
+
+
