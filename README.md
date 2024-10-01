@@ -28,7 +28,8 @@ A interface do projeto é simples e intuitiva, composta por:
   
 Aqui está um exemplo da página inicial:
 
-![Print da Página](/POC-04-Fetch-main/imgs/tela_inicial.png)
+![Print da Página] ![tela_inicial](https://github.com/user-attachments/assets/71caa5aa-0ca3-4cb1-83c7-fd52691e2176)
+
 
 ---
 
@@ -102,12 +103,6 @@ Para garantir que o projeto está funcionando corretamente e para diagnosticar p
   ```plaintext
   Sua imagem foi gerada com sucesso!
 
-```
-📦 POC-Fetch-API
-├── 📜 index.html        # Arquivo HTML principal
-├── 📜 style.css         # Arquivo CSS para estilização
-├── 📜 script.js         # Arquivo JavaScript contendo a lógica de fetch
-└── 📜 README.md         # Documentação do projeto ```
 
 
 
