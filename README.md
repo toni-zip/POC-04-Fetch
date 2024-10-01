@@ -27,8 +27,7 @@ A interface do projeto é simples e intuitiva, composta por:
 - **Botão "Trocar Imagem"**: Permite ao usuário buscar novas imagens de raposas de forma dinâmica.
   
 Aqui está um exemplo da página inicial:
-
-![Print da Página] ![tela_inicial](https://github.com/user-attachments/assets/71caa5aa-0ca3-4cb1-83c7-fd52691e2176)
+![tela_inicial](https://github.com/user-attachments/assets/71caa5aa-0ca3-4cb1-83c7-fd52691e2176)
 
 
 ---
