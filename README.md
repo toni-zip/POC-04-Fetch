@@ -60,7 +60,7 @@ async function getRaposa(endpoint) {
         console.log("Sua imagem foi gerada com sucesso!");
     }
 }
-
+```
 Neste exemplo:
 
 A função fetch() realiza uma requisição HTTP e retorna uma Promise.
