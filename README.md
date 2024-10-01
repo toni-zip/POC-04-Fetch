@@ -102,6 +102,8 @@ Para garantir que o projeto está funcionando corretamente e para diagnosticar p
   ```plaintext
   Sua imagem foi gerada com sucesso!
 
-
+- caso o contrário, você verá a mensagem:
+   ```plaintext
+  error
 
 
