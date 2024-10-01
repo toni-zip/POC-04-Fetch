@@ -14,8 +14,7 @@ html, body {
 }
 
 /* BASE */
-
-body{
+body {
     font-family: "Montserrat", sans-serif;
     background-color: var(--fundobody);
     color: var(--textocor);
@@ -24,7 +23,6 @@ body{
     align-items: center;
     height: 100%;
     margin: 0;
-
 }
 
 #container {
@@ -34,17 +32,30 @@ body{
     border-radius: 10px;
     box-shadow: 2px 4px 10px rgba(255, 132, 0, 0.858);
     height: auto;
-    padding: 0px 20px 0px 20px;
+    padding: 20px;
 }
 
 #imagem-container img {
     max-width: 100%;
-    border: 3px solid var(--corborda);
+    box-shadow: 2px 4px 10px rgba(255, 132, 0, 0.858);
     border-radius: 10px;
     margin-top: 20px;
     height: 450px;
     margin-bottom: 25px;
 }
 
+button {
+    background-color: var(--fundobox);
+    color: var(--textocor);
+    border: 1px solid var(--corborda);
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
 
+button:hover {
+    border: 1px solid var(--textocor);
 
+}
